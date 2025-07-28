@@ -46,7 +46,7 @@ async def process_event(event_id: str, event_data: dict):
 
         # Extra Debug: Check DB rows immediately
         result = db.query(OrderEventModel).count()
-        print(f"📊 Total records in DB: {result}")
+        print(f" Total records in DB: {result}")
 
     except SQLAlchemyError as e:
         db.rollback()
