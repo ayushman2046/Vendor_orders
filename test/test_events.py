@@ -13,6 +13,5 @@ def test_post_events(client, auth_headers):
 
     data = response.json()
 
-    print(data)
     assert data["status"] == "queued"
     assert data["order_id"] == "ORD123"
