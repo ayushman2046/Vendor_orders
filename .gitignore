@@ -1,5 +1,5 @@
 requirements.txt
 __pycache__
 .env
-docker_compose.yml
+docker-compose.yml
 Dockerfile
