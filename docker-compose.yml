@@ -26,12 +26,13 @@ services:
     container_name: db
     environment:
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
       POSTGRES_DB: vendor_orders 
     ports:
       - "5432:5432"
     volumes:
       - pgdata:/var/lib/postgresql/data
+    env_file:
+      - .env
 
   redis_consumer:
     build: .
